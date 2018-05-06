@@ -1,5 +1,7 @@
 package cz.fku.designPatterns.decorator;
 
+import cz.fku.designPatterns.decorator.decorators.BubbleLights;
+import cz.fku.designPatterns.decorator.decorators.Garland;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

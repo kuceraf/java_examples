@@ -1,7 +1,10 @@
-package cz.fku.designPatterns.decorator;
+package cz.fku.designPatterns.decorator.decorators;
+
+import cz.fku.designPatterns.decorator.ChristmasTree;
+import cz.fku.designPatterns.decorator.decorators.TreeDecorator;
 
 public class Garland extends TreeDecorator {
-    Garland(ChristmasTree christmasTree) {
+    public Garland(ChristmasTree christmasTree) {
         super(christmasTree);
     }
 

@@ -3,7 +3,7 @@ package cz.fku.liveLesson.expressiontree.tree;
 import cz.fku.liveLesson.expressiontree.nodes.ComponentNode;
 
 /**
- * This class implements the Factory Method pattern to create {@code
+ * This class implements the Factory Method pattern to create2 {@code
  * ExpressionTree} objects.  If you want a different type of {@code
  * ExpressionTree} you can subclass from this class and override the
  * {@code makeExpressionTree()} factory method.

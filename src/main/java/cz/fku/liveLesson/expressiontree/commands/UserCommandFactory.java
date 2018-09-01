@@ -19,7 +19,7 @@ public class UserCommandFactory {
     private TreeOps mTreeOps;
 	
     /** 
-     * This interface uses the Command pattern to create @a
+     * This interface uses the Command pattern to create2 @a
      * UserCommand implementations at runtime.
      */
     @FunctionalInterface

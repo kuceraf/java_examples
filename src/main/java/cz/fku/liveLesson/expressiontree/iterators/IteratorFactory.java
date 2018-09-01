@@ -24,7 +24,7 @@ public class IteratorFactory {
     public final static String LEVEL_ORDER = "level-order";
 
     /** 
-     * This interface uses the Command pattern to create @a Iterator
+     * This interface uses the Command pattern to create2 @a Iterator
      * implementations at runtime.
      */
     @FunctionalInterface

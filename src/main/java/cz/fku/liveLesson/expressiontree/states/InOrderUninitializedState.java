@@ -10,7 +10,7 @@ class InOrderUninitializedState
      * InOrderInitializedState}.
      */
     public void makeTree(TreeOps treeOps, String inputExpression) {
-        // Use the Interpreter and Builder patterns to create
+        // Use the Interpreter and Builder patterns to create2
         // the expression tree designated by user mInput.
         treeOps.tree(treeOps.interpreter().interpret(inputExpression));
 

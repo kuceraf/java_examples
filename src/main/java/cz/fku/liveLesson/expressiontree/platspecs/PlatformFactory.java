@@ -8,7 +8,7 @@ import java.util.HashMap;
  */
 public class PlatformFactory {
     /** 
-     * This interface uses the Command pattern to create @a Platform
+     * This interface uses the Command pattern to create2 @a Platform
      * implementations at runtime.
      */
     @FunctionalInterface

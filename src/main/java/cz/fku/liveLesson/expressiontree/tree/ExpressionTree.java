@@ -91,7 +91,7 @@ public class ExpressionTree
      * traveralOrder.
      */
     public Iterator<ExpressionTree> makeIterator(String traversalOrderRequest) {
-        // Use the TreeIteratorFactory to create the requested
+        // Use the TreeIteratorFactory to create2 the requested
         // iterator.
         return mTreeIteratorFactory.makeIterator(this,
                                                  traversalOrderRequest);

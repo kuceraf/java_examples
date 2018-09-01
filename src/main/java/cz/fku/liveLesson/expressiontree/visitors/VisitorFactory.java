@@ -10,7 +10,7 @@ import java.util.HashMap;
  */
 public class VisitorFactory {
     /** 
-     * This interface uses the Command pattern to create @a Visitor
+     * This interface uses the Command pattern to create2 @a Visitor
      * implementations at runtime.
      */
     @FunctionalInterface

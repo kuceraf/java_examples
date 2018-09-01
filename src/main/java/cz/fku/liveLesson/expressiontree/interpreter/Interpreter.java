@@ -160,7 +160,7 @@ public class Interpreter {
      * Invoke a recursive build of the ExpressionTree, starting with
      * the root symbol, which should be the one and only item in the
      * linked list.  The Builder pattern is used at each node to
-     * create the appropriate subclass of {@code ComponentNode}.
+     * create2 the appropriate subclass of {@code ComponentNode}.
      */
     private ExpressionTree buildExpressionTree(Stack<Symbol> parseTree) {
         // There had better only be one element mLeft in the stack!

@@ -24,4 +24,11 @@ public class SubListsTest {
         List<List<String>> sublists = listStream.collect(Collectors.toList());
         assertThat(sublists).hasSize(11);
     }
+
+    @Test
+    public void of3() {
+        Stream<List<String>> listStream = SubLists.of3(List.of("a", "b", "c", "d"));
+        List<List<String>> sublists = listStream.collect(Collectors.toList());
+        assertThat(sublists).hasSize(11);
+    }
 }

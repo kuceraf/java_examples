@@ -1,5 +1,6 @@
 package cz.fku.effectiveJava.lambda;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.IntStream;
@@ -54,5 +55,19 @@ public class SubLists {
                             .peek((newList) -> System.out.println(start + " maps to: " + newList));
                 })
                 .flatMap(x -> x);
+    }
+
+    // VERSION 3
+    public static <E> Stream<List<E>> of3 (List<E> list) {
+        List<List<E>> metaList = new ArrayList<>();
+        metaList.add(Collections.emptyList());
+        for(int start = 0; start < list.size(); start++) {
+            for(int end = start + 1; end <= list.size(); end++) {
+                List<E> subList = list.subList(start, end);
+                metaList.add(subList);
+                System.out.println(start + " maps to: " + subList);
+            }
+        }
+        return metaList.stream();
     }
 }

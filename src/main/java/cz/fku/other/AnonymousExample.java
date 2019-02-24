@@ -23,10 +23,26 @@ public class AnonymousExample {
         };
         System.out.println("-- local anonymous class --");
         print(localRunnable.getClass(), localRunnable);
+        /*
+            -- local anonymous class --
+            - constructors -
+            cz.fku.other.AnonymousExample$3()
+            - fields -
+        */
 
         System.out.println("\n-- instance anonymous class --");
         AnonymousExample em = new AnonymousExample();
         print(em.instanceRunnable.getClass(), em.instanceRunnable);
+        /*
+            -- instance anonymous class --
+            - constructors -
+            cz.fku.other.AnonymousExample$1(cz.fku.other.AnonymousExample) -- em.instanceRunnable is inner anonymous class (in it's constructor is reference to is't enclosing class)
+
+            - fields -
+             field name: this$0, -- an implicit outer class instance field were added by the compiler
+             field type: class cz.fku.other.AnonymousExample,
+             field value: cz.fku.other.AnonymousExample@19469ea2
+        */
 
         System.out.println("\n-- static member anonymous class --");
         print(staticRunnable.getClass(), staticRunnable);

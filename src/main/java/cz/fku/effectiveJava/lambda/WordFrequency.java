@@ -21,7 +21,7 @@ public class WordFrequency {
                             // classification function
                             String::toLowerCase,
                             // collector implementing the downstream reduction
-                            // by using the downstream collector we can apply aggregation functions in the results of the classification function.
+                            // by using the downstream collector we can apply aggregation basic in the results of the classification function.
                             counting()
                             ));
         }

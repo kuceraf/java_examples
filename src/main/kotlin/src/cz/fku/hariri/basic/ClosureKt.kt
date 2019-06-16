@@ -1,4 +1,4 @@
-package cz.fku.hariri.functions
+package cz.fku.hariri.basic
 
 fun outsideFunction() {
     for(number in 1..30) {

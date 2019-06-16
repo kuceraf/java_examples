@@ -1,4 +1,4 @@
-package cz.fku.hariri.functions
+package cz.fku.hariri.basic
 
 fun operation(a: Int, b: Int, op: (Int, Int) -> Int): Int {
     return op(a,b);

@@ -1,4 +1,4 @@
-package cz.fku.hariri.functions
+package cz.fku.hariri.basic
 
 
 data class Album (val name: String, val lenght: Int, val tracks: List<Track>)

@@ -1,7 +1,7 @@
-package cz.fku.hariri.functions
+package cz.fku.hariri.basic
 
 fun main(args: Array<String>) {
-    val baseClass: BaseClass = BaseClass();
+    val baseClass: BaseClass = BaseClass()
     baseClass.extension()
     val inheritedClass: InheritedClass = InheritedClass()
     inheritedClass.extension()

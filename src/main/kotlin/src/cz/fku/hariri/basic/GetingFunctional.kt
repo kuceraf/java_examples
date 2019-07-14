@@ -14,7 +14,7 @@ fun unaryOperation(x: Int, op: (Int) -> Int): Int {
 
 fun main(args: Array<String>) {
     val sumLambda = {a: Int, b: Int -> a + b} // lambda without type inference
-    println(operation(1,2, ::sum)); // referencing function
+    println(operation(1,2, ::sum)) // referencing function
     println(operation(1,2, {a,b -> a*b})); // lambda with type inference (it is in context)
     println(operation(1,2, sumLambda)); // lambda with type inference (it is in context)
     println(unaryOperation(3, {a -> a*a}))

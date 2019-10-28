@@ -1,4 +1,4 @@
-package cz.fku.designPatterns.structural.decorator;
+package cz.fku.designPatterns.structural.decorator.example1;
 
 public class ChristmasTreeImpl implements ChristmasTree {
     @Override

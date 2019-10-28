@@ -1,6 +1,6 @@
-package cz.fku.designPatterns.structural.decorator.decorators;
+package cz.fku.designPatterns.structural.decorator.example1.decorators;
 
-import cz.fku.designPatterns.structural.decorator.ChristmasTree;
+import cz.fku.designPatterns.structural.decorator.example1.ChristmasTree;
 
 public abstract class TreeDecorator implements ChristmasTree {
     private ChristmasTree christmasTree;

@@ -1,7 +1,7 @@
-package cz.fku.designPatterns.structural.decorator.decorators;
+package cz.fku.designPatterns.structural.decorator.example1.decorators;
 
 
-import cz.fku.designPatterns.structural.decorator.ChristmasTree;
+import cz.fku.designPatterns.structural.decorator.example1.ChristmasTree;
 
 public class BubbleLights extends TreeDecorator {
     public BubbleLights(ChristmasTree christmasTree) {

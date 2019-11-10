@@ -1,10 +1,12 @@
-package cz.fku.designPatterns.creational.factory;
+package cz.fku.designPatterns.creational.staticFactory;
 
 import cz.fku.designPatterns.behavioural.strategy.strategies.Cash;
 import cz.fku.designPatterns.behavioural.strategy.strategies.CreditCard;
 import cz.fku.designPatterns.behavioural.strategy.strategies.DebitCard;
 import cz.fku.designPatterns.behavioural.strategy.PaymentMethod;
 
+// Static factory is not real design pattern
+// but it can be used as supplier of object
 public class PaymentMethodFactory {
     public static PaymentMethod getPaymentMethod(String type) {
         switch (type) {

@@ -3,7 +3,7 @@ package cz.fku.designPatterns.behavioural.visitor.doubledispatch;
 public class DoubleDispatchVisitor {
 }
 
-class CalculationVisitor implements  ExpressionVisitor {
+class CalculationVisitor implements ExpressionVisitor {
     public double result;
     @Override
     public void visit(DoubleExpression expression) {

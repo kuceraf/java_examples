@@ -44,6 +44,11 @@ class SingleValue implements ValueContainer
 
 class ManyValues extends ArrayList<Integer> implements ValueContainer
 {
+    public static ManyValues create(List<Integer> from) {
+        ManyValues manyValues = new ManyValues();
+        manyValues.addAll(from);
+        return manyValues;
+    }
 }
 
 
@@ -69,6 +74,14 @@ class MyList extends ArrayList<ValueContainer>
 
 class Demo {
     public static void main(String[] args) {
-
+        List<ValueContainer> values = Arrays.asList(
+                new SingleValue(1),
+                new SingleValue(1),
+                ManyValues.create(
+                        Arrays.asList(1, 1)
+                )
+        );
+        MyList myList = new MyList(values);
+        myList.sum();
     }
 }

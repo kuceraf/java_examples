@@ -29,12 +29,16 @@ fun merge(input: Array<Int>, start: Int, mid: Int, end: Int) {
     var tmpIndex = 0
 
     while (i < mid && j < end) {
-        tmpArray[tmpIndex++] = if(input[i] <= input[j]) {
+        tmpArray[tmpIndex++] = if (input[i] <= input[j]) {
             input[i++]
         } else {
             input[j++]
         }
     }
+    // handling the remaining elements from left array
+    // if we process all elements in left array the length param (min - i) will be 0, and we not copy anything
+    // if there are some remaining elements from left array they will be copied to the end (start + tmpIndex)
+    // if there are some remaining elements in right array we keep them - they already are in correct position
     System.arraycopy(input, i, input, start + tmpIndex, mid - i)
     System.arraycopy(tmpArray.toTypedArray(), 0, input, start, tmpIndex)
 }

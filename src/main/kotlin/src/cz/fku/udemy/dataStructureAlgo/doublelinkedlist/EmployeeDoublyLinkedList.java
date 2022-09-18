@@ -1,4 +1,4 @@
-package academy.learnprogramming.challenge1;
+package cz.fku.udemy.dataStructureAlgo.doublelinkedlist;
 
 public class EmployeeDoublyLinkedList {
 
@@ -41,32 +41,32 @@ public class EmployeeDoublyLinkedList {
 
         // add your code here
 
-        EmployeeNode actualNode = head;
-        EmployeeNode foundNode = null;
-        while (actualNode != null && foundNode == null) {
-            if (actualNode.getEmployee().equals(existingEmployee)) {
-                foundNode = actualNode;
-            } else {
-                actualNode = actualNode.getNext();
-            }
-        }
-
-        if (foundNode != null) {
-            //
-            EmployeeNode newNode = new EmployeeNode(newEmployee);
-            newNode.setNext(foundNode);
-            if (actualNode.getPrevious() != null) {
-                newNode.setPrevious(actualNode.getPrevious());
-                actualNode.getPrevious().setNext(newNode);
-            } else {
-                head = newNode;
-            }
-            actualNode.setPrevious(newNode);
-            size++;
-            return true;
-        } else {
+        if (head == null) {
             return false;
         }
+        EmployeeNode current = head;
+        EmployeeNode foundNode = null;
+        while (current != null && current.getEmployee().equals(existingEmployee)) {
+            current = current.getNext();
+        }
+
+        if (current == null) {
+            return false;
+        }
+
+        //
+        EmployeeNode newNode = new EmployeeNode(newEmployee);
+        newNode.setNext(foundNode);
+        if (current.getPrevious() != null) {
+            newNode.setPrevious(current.getPrevious());
+            current.getPrevious().setNext(newNode);
+        } else {
+            head = newNode;
+        }
+        current.setPrevious(newNode);
+        size++;
+        return true;
+
     }
 
     public EmployeeNode removeFromFront() {

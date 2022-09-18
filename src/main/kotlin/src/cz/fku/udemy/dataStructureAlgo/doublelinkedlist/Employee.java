@@ -1,4 +1,4 @@
-package academy.learnprogramming.challenge1;
+package cz.fku.udemy.dataStructureAlgo.doublelinkedlist;
 
 public class Employee {
 

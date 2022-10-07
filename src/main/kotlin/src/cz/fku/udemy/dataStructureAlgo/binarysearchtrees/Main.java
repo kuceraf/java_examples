@@ -16,7 +16,7 @@ public class Main {
 	    intTree.insert(32);
 	    intTree.insert(17);
 
-        //intTree.traverseInOrder();
+        intTree.traversePreOrder();
         //System.out.println();
 
 //

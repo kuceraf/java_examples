@@ -67,6 +67,12 @@ public class Tree {
         }
     }
 
+    public void traversePreOrder() {
+        if (root != null) {
+            root.traversePreOrder();
+        }
+    }
+
     public void traverseInOrder() {
         if (root != null) {
             root.traverseInOrder();

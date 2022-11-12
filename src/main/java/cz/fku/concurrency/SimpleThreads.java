@@ -14,8 +14,7 @@ public class SimpleThreads {
                 message);
     }
 
-    private static class MessageLoop
-            implements Runnable {
+    private static class MessageLoop implements Runnable {
         public void run() {
             String importantInfo[] = {
                     "Mares eat oats",
@@ -24,11 +23,9 @@ public class SimpleThreads {
                     "A kid will eat ivy too"
             };
             try {
-                for (int i = 0;
-                     i < importantInfo.length;
-                     i++) {
+                for (int i = 0; i < importantInfo.length; i++) {
                     // Pause for 4 seconds
-                    Thread.sleep(4000);
+                    Thread.sleep(40000);
                     // Print a message
                     threadMessage(importantInfo[i]);
                 }
@@ -41,6 +38,8 @@ public class SimpleThreads {
     public static void main(String args[])
             throws InterruptedException {
 
+        long pid = ProcessHandle.current().pid();
+        System.out.println("PID: " + pid);
         // Delay, in milliseconds before
         // we interrupt MessageLoop
         // thread (default one hour).
@@ -72,7 +71,7 @@ public class SimpleThreads {
             // Wait maximum of 1 second
             // for MessageLoop thread
             // to finish.
-            t.join(1000); //The join method allows one thread to wait for the completion of another. -  wait 1s and than repeat the while loop
+            t.join(10000); //The join method allows one thread to wait for the completion of another. -  wait 1s and than repeat the while loop
             if (((System.currentTimeMillis() - startTime) > patience)
                     && t.isAlive()) {
                 threadMessage("Tired of waiting!");

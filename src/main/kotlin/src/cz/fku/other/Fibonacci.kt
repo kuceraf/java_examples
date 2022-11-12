@@ -1,14 +1,19 @@
 package cz.fku.other
 
+import java.util.concurrent.ConcurrentHashMap
+
 class Fibonacci {
     // dynamic programming cache
-    private val cache = mutableMapOf<Int, Int>()
+    private val cache = ConcurrentHashMap<Int, Int>()
     fun fibonacci(n: Int, s: String): Int {
         println("$s: $n")
         if (n <= 1) {
             return n // 0,1
         }
 
+//        return cache.computeIfAbsent(n) {
+//            fibonacci(n - 1, "left") + fibonacci(n - 2, "right")
+//        }
         return when {
             cache.containsKey(n) -> cache[n]!!
             else -> {
@@ -20,5 +25,5 @@ class Fibonacci {
 }
 
 fun main() {
-    println(Fibonacci().fibonacci(8, "start"))
+    println(Fibonacci().fibonacci(3, "start"))
 }
